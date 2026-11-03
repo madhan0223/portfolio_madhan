@@ -10,7 +10,7 @@ const STORAGE_KEY = 'portfolio_user_profile_v3';
  */
 export const DEFAULT_PROFILE = {
   fullName: profileData.name || 'Madhan S',
-  profilePhoto: null, // Base64 string or null for default avatar
+  profilePhoto: "https://raw.githubusercontent.com/madhan0223/portfolio_madhan/main/file_000000007cf08210891c7b5e04dae878.png", // Base64 string or null for default avatar
   dob: '2005-09-02',
   gender: 'Male', // 'Male' | 'Female' | 'Other' | 'Prefer not to say'
   email: profileData.email || 'madhansridharmd@gmail.com',
