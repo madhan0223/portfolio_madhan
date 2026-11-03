@@ -22,7 +22,7 @@ export const profileData = {
   githubUsername: "madhan0223",
   linkedin: "https://www.linkedin.com/in/madhan-s-6b6b71311/",
   linkedinUsername: "madhan-s-6b6b71311",
-  resumePath: "/Madhan_S_Resume.pdf",
+  resumePath: "https://github.com/madhan0223/madhan_resume/raw/refs/heads/main/madhan_final_resume.pdf",
   resumeFileName: "Madhan_S_Resume.pdf",
   openToOpportunities: true,
   statusBadge: "Open to Opportunities",
