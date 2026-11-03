@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
   User, 
-  Edit3, 
   Settings, 
   ChevronDown, 
   ShieldCheck, 
@@ -46,11 +45,6 @@ export const ProfileDropdown = () => {
   const handleOpenMyProfile = () => {
     setIsOpen(false);
     openProfile('view');
-  };
-
-  const handleOpenEditProfile = () => {
-    setIsOpen(false);
-    openProfile('edit');
   };
 
   const handleOpenSettings = () => {
@@ -151,24 +145,10 @@ export const ProfileDropdown = () => {
                 </div>
               </button>
 
-              {/* 2. Edit Profile */}
-              <button
-                onClick={handleOpenEditProfile}
-                className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-medium text-slate-200 hover:text-white hover:bg-white/[0.06] transition-all group text-left"
-              >
-                <div className="p-1.5 rounded-lg bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 group-hover:scale-105 transition-transform">
-                  <Edit3 className="w-4 h-4 text-cyan-400" />
-                </div>
-                <div className="flex-1">
-                  <span className="font-semibold block">Edit Profile</span>
-                  <span className="text-[10px] text-slate-400 font-normal">Change photo, DOB, address</span>
-                </div>
-              </button>
-
               {/* Divider */}
               <div className="my-1.5 border-t border-white/[0.08]" />
 
-              {/* 3. Settings (Linked to Resume Settings) */}
+              {/* 2. Settings (Linked to Resume Settings) */}
               <button
                 onClick={handleOpenSettings}
                 className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-medium text-slate-300 hover:text-[#c89658] hover:bg-white/[0.04] transition-all group text-left"
