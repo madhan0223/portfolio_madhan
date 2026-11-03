@@ -3,14 +3,14 @@ import { profileData } from '../data/profile';
 /**
  * Storage key for user profile
  */
-const STORAGE_KEY = 'portfolio_user_profile_v2';
+const STORAGE_KEY = 'portfolio_user_profile_v3';
 
 /**
  * Default initial profile structure based on verified candidate data
  */
 export const DEFAULT_PROFILE = {
   fullName: profileData.name || 'Madhan S',
-  profilePhoto: '/images/profile/madhan.jpg',
+  profilePhoto: null, // Base64 string or null for default avatar
   dob: '2005-09-02',
   gender: 'Male', // 'Male' | 'Female' | 'Other' | 'Prefer not to say'
   email: profileData.email || 'madhansridharmd@gmail.com',

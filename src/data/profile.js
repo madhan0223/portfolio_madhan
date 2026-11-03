@@ -15,7 +15,7 @@ export const profileData = {
   email: "madhansridharmd@gmail.com",
   dob: "2005-09-02",
   dobFormatted: "September 02, 2005",
-  profilePhoto: "/images/profile/madhan.jpg",
+  profilePhoto: null,
   permanentAddress: "2/331, North Street, Vadasiruvallur, Sankarapuram (TK), Kallakurichi (DT) - 606402",
   currentAddress: "No.394, 10th Street, MMDA Colony, 1st Main Road, Maduravoyal, Chennai - 600095",
   github: "https://github.com/madhan0223",
