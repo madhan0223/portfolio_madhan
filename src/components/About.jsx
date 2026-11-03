@@ -15,9 +15,11 @@ import {
 import { profileData } from '../data/profile';
 import { educationData } from '../data/experience';
 import { useNavigation } from '../context/NavigationContext';
+import { useProfile } from '../context/ProfileContext';
 
 export const About = () => {
   const { setActiveTab } = useNavigation();
+  const { profile } = useProfile();
 
   return (
     <section id="about" className="pt-1 pb-12 sm:pb-16 relative z-10 max-w-7xl mx-auto px-1 sm:px-3">
@@ -95,8 +97,16 @@ export const About = () => {
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#c89658] via-[#eed2ad] to-[#c89658]" />
 
             <div className="flex items-center gap-3.5 pb-4 border-b border-white/10">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#c89658]/20 to-[#161720] border border-[#c89658]/40 flex items-center justify-center font-display font-black text-xl text-[#e6bc86] shadow-[0_0_20px_rgba(200,150,88,0.25)] shrink-0">
-                MS
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#c89658]/20 to-[#161720] border border-[#c89658]/40 overflow-hidden flex items-center justify-center font-display font-black text-xl text-[#e6bc86] shadow-[0_0_20px_rgba(200,150,88,0.25)] shrink-0">
+                {(profile?.profilePhoto || profileData.profilePhoto) ? (
+                  <img 
+                    src={profile?.profilePhoto || profileData.profilePhoto} 
+                    alt={profileData.name} 
+                    className="w-full h-full object-cover object-top"
+                  />
+                ) : (
+                  <span>MS</span>
+                )}
               </div>
               <div>
                 <h3 className="text-base font-bold text-white leading-tight">{profileData.name}</h3>

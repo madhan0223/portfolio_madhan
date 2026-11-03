@@ -3,21 +3,21 @@ import { profileData } from '../data/profile';
 /**
  * Storage key for user profile
  */
-const STORAGE_KEY = 'portfolio_user_profile_v1';
+const STORAGE_KEY = 'portfolio_user_profile_v2';
 
 /**
  * Default initial profile structure based on verified candidate data
  */
 export const DEFAULT_PROFILE = {
   fullName: profileData.name || 'Madhan S',
-  profilePhoto: null, // Base64 string or null for default avatar
-  dob: '2003-05-14',
+  profilePhoto: '/images/profile/madhan.jpg',
+  dob: '2005-09-02',
   gender: 'Male', // 'Male' | 'Female' | 'Other' | 'Prefer not to say'
   email: profileData.email || 'madhansridharmd@gmail.com',
   phone: profileData.phone || '+91 8248358213',
-  permanentAddress: '12/4, Anna Nagar 2nd Street, Chennai, Tamil Nadu - 600040',
-  currentAddress: '12/4, Anna Nagar 2nd Street, Chennai, Tamil Nadu - 600040',
-  sameAsPermanent: true,
+  permanentAddress: '2/331, North Street, Vadasiruvallur, Sankarapuram (TK), Kallakurichi (DT) - 606402',
+  currentAddress: 'No.394, 10th Street, MMDA Colony, 1st Main Road, Maduravoyal, Chennai - 600095',
+  sameAsPermanent: false,
   updatedAt: new Date().toISOString()
 };
 
