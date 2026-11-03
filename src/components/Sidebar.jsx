@@ -27,7 +27,7 @@ export const Sidebar = () => {
   const { openSettings } = useResume();
 
   return (
-    <aside className="w-52 sm:w-56 shrink-0 h-fit sticky top-6 sm:top-8 self-start z-20 rounded-[28px] bg-[#121319]/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.6)] backdrop-blur-2xl p-4 sm:p-5 flex flex-col justify-between select-none">
+    <aside className="hidden md:flex md:flex-col w-52 sm:w-56 shrink-0 h-fit sticky top-6 sm:top-8 self-start z-20 rounded-[28px] bg-[#121319]/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.6)] backdrop-blur-2xl p-4 sm:p-5 justify-between select-none">
       
       {/* Navigation Menu List */}
       <nav className="flex flex-col space-y-1 sm:space-y-1.5">

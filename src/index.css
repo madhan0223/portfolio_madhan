@@ -36,6 +36,10 @@
     scrollbar-color: rgba(200, 150, 88, 0.4) transparent;
   }
 
+  /* Hide scrollbar for mobile horizontal nav */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
   .glass-card {
     background: rgba(10, 15, 32, 0.6);
     backdrop-filter: blur(20px);

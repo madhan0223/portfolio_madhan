@@ -14,6 +14,7 @@ import { Contact } from './components/Contact';
 import { ResumeSettingsModal } from './components/ResumeSettingsModal';
 import { ProfileDropdown } from './components/ProfileDropdown';
 import { ProfileModal } from './components/ProfileModal';
+import { MobileNav } from './components/MobileNav';
 
 const ToastNotification = () => {
   const { toastMessage } = useResume();
@@ -55,13 +56,19 @@ function AppContent() {
       {/* Main SnapFolio Container: Left Sidebar + Center/Right Workstation Area */}
       <div className="relative z-10 w-full max-w-7xl flex flex-col md:flex-row items-center md:items-start gap-6 lg:gap-10 my-auto">
         
-        {/* Left Floating Sidebar Navigation */}
+        {/* Left Floating Sidebar Navigation (Desktop only) */}
         <Sidebar />
 
-        {/* Center/Right Dynamic Content Area (Smooth In-Place Crossfade with Vertical Scrolling) */}
-        <main className={`flex-1 w-full rounded-[28px] bg-[#121319]/60 border border-white/[0.06] shadow-[0_12px_40px_rgba(0,0,0,0.4)] backdrop-blur-xl p-5 sm:p-8 lg:p-10 min-h-[580px] max-h-[86vh] overflow-y-auto custom-scrollbar scroll-smooth flex flex-col ${
-          activeTab === 'home' ? 'justify-center' : 'justify-start'
-        }`}>
+        {/* Main Content Wrapper — includes mobile nav + content area */}
+        <div className="flex-1 w-full flex flex-col rounded-[28px] bg-[#121319]/60 border border-white/[0.06] shadow-[0_12px_40px_rgba(0,0,0,0.4)] backdrop-blur-xl overflow-hidden">
+          
+          {/* Mobile Top Horizontal Navigation */}
+          <MobileNav />
+
+          {/* Center/Right Dynamic Content Area (Smooth In-Place Crossfade with Vertical Scrolling) */}
+          <main className={`flex-1 w-full p-5 sm:p-8 lg:p-10 md:min-h-[580px] md:max-h-[86vh] overflow-y-auto custom-scrollbar scroll-smooth flex flex-col ${
+            activeTab === 'home' ? 'justify-center' : 'justify-start'
+          }`}>
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -81,6 +88,7 @@ function AppContent() {
             </motion.div>
           </AnimatePresence>
         </main>
+        </div>
 
       </div>
 
